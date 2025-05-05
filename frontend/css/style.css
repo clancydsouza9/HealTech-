@@ -1,0 +1,591 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6; /* Light grayish background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title-container h1 {
+    color: #20b2aa; /* Teal accent color */
+    margin-bottom: 5px;
+}
+
+.title-container .location {
+    color: #777;
+    font-size: 0.9em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #20b2aa;
+}
+
+main {
+    padding: 30px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+    background-color: #e8f5f3; /* Light teal background */
+    border-radius: 8px;
+}
+
+.hero h2 {
+    color: #20b2aa;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.call-to-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button.primary {
+    background-color: #20b2aa;
+    color: white;
+}
+
+.button.primary:hover {
+    background-color: #148f77;
+}
+
+.button.secondary {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+.button.secondary:hover {
+    background-color: #e0e0e0;
+}
+
+.features {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.features h3 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.features ul li:last-child {
+    border-bottom: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .title-container {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .call-to-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .hero {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+}
+/* Styles for the Authentication Container and Card */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+}
+
+.auth-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-card .branding {
+    margin-bottom: 30px;
+}
+
+.auth-card .branding h1 {
+    color: #20b2aa;
+    margin-bottom: 8px;
+}
+
+.auth-card .branding .tagline {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.auth-form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.auth-form .form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.auth-form .form-group input[type="email"],
+.auth-form .form-group input[type="password"],
+.auth-form .form-group select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.auth-form .form-group input:focus,
+.auth-form .form-group select:focus {
+    outline: none;
+    border-color: #20b2aa;
+    box-shadow: 0 0 8px rgba(32, 178, 170, 0.3);
+}
+
+.auth-form .password-group {
+    position: relative;
+}
+
+.auth-form .password-group input[type="password"] {
+    padding-right: 70px;
+}
+
+.auth-form .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #777;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.auth-form .form-text {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.auth-form .submit-button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    background-color: #20b2aa;
+    color: white;
+}
+
+.auth-form .submit-button:hover {
+    background-color: #148f77;
+}
+
+.auth-links {
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.auth-links a {
+    color: #20b2aa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: #148f77;
+    text-decoration: underline;
+}
+
+.auth-links .separator {
+    margin: 0 10px;
+}
+
+/* Responsive for Auth Card */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .auth-form {
+        gap: 15px;
+    }
+
+    .auth-form .form-group label {
+        margin-bottom: 5px;
+    }
+
+    .auth-form .form-group input,
+    .auth-form .form-group select {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    .auth-form .submit-button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .auth-links {
+        font-size: 0.9em;
+    }
+}
+/* Additional styles for signup forms */
+.auth-form .terms-group {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.auth-form .terms-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.auth-form .terms-group label a {
+    color: #20b2aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-form .terms-group label a:hover {
+    color: #148f77;
+    text-decoration: underline;
+}
+
+.auth-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ensure consistent font */
+}
+
+.auth-form textarea:focus {
+    outline: none;
+    border-color: #20b2aa;
+    box-shadow: 0 0 8px rgba(32, 178, 170, 0.3);
+}
+/* Style for file input */
+.auth-form input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.auth-form input[type="file"]:focus {
+    outline: none;
+    border-color: #20b2aa;
+    box-shadow: 0 0 8px rgba(32, 178, 170, 0.3);
+}
+/* Add these styles to your existing style.css */
+
+/* Dashboard Header */
+.dashboard-header {
+    background-color: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dashboard-header .logo-container h1 {
+    color: #20b2aa;
+    margin-bottom: 5px;
+}
+
+.dashboard-header .logo-container p {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.dashboard-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.dashboard-header nav ul li {
+    margin-left: 20px;
+}
+
+.dashboard-header nav ul li:first-child {
+    margin-left: 0;
+}
+
+.dashboard-header nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.dashboard-header nav a:hover {
+    color: #20b2aa;
+}
+.dashboard-header .logout-button{
+     background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.dashboard-header .logout-button:hover{
+ background-color: #d32f2f;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    padding: 30px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-content .welcome-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.dashboard-content .welcome-section h2 {
+    color: #20b2aa;
+    margin-bottom: 10px;
+}
+
+.dashboard-content .welcome-section p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.dashboard-content .health-summary {
+    margin-bottom: 30px;
+}
+
+.dashboard-content .health-summary h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.dashboard-content .summary-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-content .summary-cards .card {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.dashboard-content .summary-cards .card h4 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.dashboard-content .summary-cards .card p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #20b2aa;
+}
+
+.dashboard-content .upcoming-appointments h3,
+.dashboard-content .schedule-summary h3,
+.dashboard-content .patient-list h3{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.dashboard-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.dashboard-content ul li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.dashboard-content ul li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive adjustments for dashboards */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .dashboard-content .summary-cards {
+        flex-direction: column;
+    }
+}
