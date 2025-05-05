@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AI Health Monitor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="branding">
+                <h1>AI Health Monitor</h1>
+                <p class="tagline">Welcome back to your health journey in Mangaluru!</p>
+            </div>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll keep your data secure.</div>
+                </div>
+                <div class="form-group password-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Your password" required aria-required="true">
+                    <button type="button" class="toggle-password" aria-label="Show password" data-target="password">Show</button>
+                </div>
+                <div class="form-group">
+                    <label for="userType">Login as:</label>
+                    <select id="userType" name="userType">
+                        <option value="patient">Patient</option>
+                        <option value="doctor">Doctor</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button primary">Log In</button>
+            </form>
+            <div class="auth-links">
+                <p>Don't have an account?</p>
+                <a href="/signup/patient">Sign up as a Patient</a>
+                <span class="separator">|</span>
+                <a href="/signup/doctor">Register as a Doctor</a>
+            </div>
+        </div>
+    </main>
+    <script src="/static/js/script.js" type="module"></script>
+</body>
+</html>
