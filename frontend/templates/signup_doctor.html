@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration - AI Health Monitor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="branding">
+                <h1>AI Health Monitor</h1>
+                <p class="tagline">Join our network of healthcare professionals in Mangaluru!  Please upload your medical practice documents. These will be verified within 24 hours for account verification.</p>
+            </div>
+            <form id="doctorSignupForm" class="auth-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your professional email" required aria-required="true" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll use this for your professional communications.</div>
+                </div>
+                <div class="form-group password-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Create a secure password" required aria-required="true">
+                    <button type="button" class="toggle-password" aria-label="Show password" data-target="password">Show</button>
+                </div>
+                <div class="form-group password-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required aria-required="true">
+                    <button type="button" class="toggle-password" aria-label="Show password" data-target="confirmPassword">Show</button>
+                </div>
+                <div class="form-group">
+                    <label for="licenseNumber">License Number:</label>
+                    <input type="text" id="licenseNumber" name="licenseNumber" placeholder="Enter your medical license number" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="specialization">Specialization:</label>
+                    <input type="text" id="specialization" name="specialization" placeholder="Your area of specialization" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="affiliation">Hospital/Clinic Affiliation:</label>
+                    <input type="text" id="affiliation" name="affiliation" placeholder="Your primary affiliation" aria-describedby="affiliationHelp">
+                    <div id="affiliationHelp" class="form-text">Optional: Your primary hospital or clinic.</div>
+                </div>
+                <div class="form-group">
+                    <label for="documents">Upload Credentials (Optional):</label>
+                    <input type="file" id="documents" name="documents" multiple aria-describedby="documentsHelp" accept=".pdf,.doc,.docx,image/*">
+                    <div id="documentsHelp" class="form-text">You can upload your license or other credentials here.  Supported formats: pdf, doc, docx, images.</div>
+                </div>
+                <div class="form-group terms-group">
+                    <input type="checkbox" id="terms" name="terms" required aria-required="true">
+                    <label for="terms">I agree to the <a href="/terms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></label>
+                </div>
+                <button type="submit" class="submit-button primary">Register as Doctor</button>
+            </form>
+            <div class="auth-links">
+                <p>Already have an account?</p>
+                <a href="/login">Log in here</a>
+            </div>
+        </div>
+    </main>
+    <script src="/static/js/script.js" type="module"></script>
+</body>
+</html>
